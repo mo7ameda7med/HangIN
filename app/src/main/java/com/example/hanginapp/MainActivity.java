@@ -7,11 +7,11 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.hanginapp.home.HomeFragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+
 
     BottomNavigationView bottomNavigationView;
     @Override

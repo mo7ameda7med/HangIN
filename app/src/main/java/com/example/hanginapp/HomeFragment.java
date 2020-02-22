@@ -1,4 +1,4 @@
-package com.example.hanginapp.home;
+package com.example.hanginapp;
 
 
 import android.app.Fragment;

@@ -1,4 +1,4 @@
-package com.example.hanginapp.models;
+package com.example.hanginapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.hanginapp.R;
 
-public class signUp extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

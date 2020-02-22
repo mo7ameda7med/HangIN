@@ -11,11 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".models.login"></activity>
-        <activity android:name=".models.signUp" />
-        <activity android:name=".models.splash" />
+
         <activity
-            android:name=".MainActivity"
+            android:name=".signInActivity"></activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
