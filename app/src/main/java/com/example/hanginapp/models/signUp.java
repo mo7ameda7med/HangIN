@@ -1,8 +1,10 @@
-package com.example.hanginapp;
+package com.example.hanginapp.models;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.hanginapp.R;
 
 public class signUp extends AppCompatActivity {
 
