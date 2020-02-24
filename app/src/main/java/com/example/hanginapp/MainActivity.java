@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         transaction.replace(R.id.frameLayout,fragment);
         transaction.commit();
+
+
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
