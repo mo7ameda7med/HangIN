@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.hanginapp.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -36,8 +37,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         FragmentTransaction transaction= getFragmentManager().beginTransaction();
         transaction.replace(R.id.frameLayout,fragment);
         transaction.commit();
-
-
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
