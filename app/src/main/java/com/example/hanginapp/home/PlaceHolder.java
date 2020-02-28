@@ -33,6 +33,7 @@ public class PlaceHolder extends RecyclerView.ViewHolder {
 
     void ViewBind(Place place)
     {
+        place.LoadImage(ImageView);
         name.setText(place.getName());
         location.setText(place.getLocation());
         ratingBar.setRating(place.getRating());

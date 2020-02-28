@@ -1,5 +1,10 @@
 package com.example.hanginapp.models;
 
+import android.widget.ImageView;
+
+import com.example.hanginapp.R;
+import com.squareup.picasso.Picasso;
+
 public class Place {
 
     private String image;
@@ -44,5 +49,11 @@ public class Place {
 
     public float getRating() {
         return rating;
+    }
+
+    public void LoadImage(ImageView imageView)
+    {
+        Picasso.get().load(getImage()).placeholder(R.drawable.appicon).error(R.drawable.appicon).into(imageView);
+
     }
 }

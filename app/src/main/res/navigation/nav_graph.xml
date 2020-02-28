@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.hanginapp.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_PlaceDetailsFragment"
+            app:destination="@+id/place_details_fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.example.hanginapp.BookingsFragment"
+        android:label="fragment_bookings"
+        tools:layout="@layout/fragment_bookings"/>
+    <fragment
+        android:id="@+id/nearbyFragment"
+        android:name="com.example.hanginapp.NearbyFragment"
+        android:label="fragment_nearby"
+        tools:layout="@layout/fragment_nearby"/>
+    <fragment
+        android:id="@+id/more_Fragment"
+        android:name="com.example.hanginapp.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more"/>
+    <fragment
+    android:id="@+id/place_details_fragment"
+    android:name="com.example.hanginapp.PlaceDetailsFragment"
+    android:label="fragment_placeDetails"
+    tools:layout="@layout/fragment_place_detials"/>
+
+
+</navigation>

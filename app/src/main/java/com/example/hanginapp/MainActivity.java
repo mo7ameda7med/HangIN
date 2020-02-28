@@ -7,20 +7,24 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 import com.example.hanginapp.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
+//        implements BottomNavigationView.OnNavigationItemSelectedListener {
 
 
-    BottomNavigationView bottomNavigationView;
+   BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        HomeFragment homeFragment =new HomeFragment();
-        openFragment(homeFragment);
+ //       HomeFragment homeFragment =new HomeFragment();
+//      openFragment(homeFragment);
         initUI();
     }
 
@@ -28,36 +32,38 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     void initUI()
     {
-        bottomNavigationView=findViewById(R.id.Bottom_Navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+       bottomNavigationView=findViewById(R.id.Bottom_Navigation);
+//        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        NavController navController= Navigation.findNavController(this,R.id.nav_host_fragment);
+        NavigationUI.setupWithNavController(bottomNavigationView,navController);
     }
 
-    void openFragment(Fragment fragment)
-    {
-        FragmentTransaction transaction= getFragmentManager().beginTransaction();
-        transaction.replace(R.id.frameLayout,fragment);
-        transaction.commit();
-    }
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.Nav_home:
-                openFragment(new HomeFragment());
-
-                break;
-            case R.id.Nav_booking:
-                openFragment(new BookingsFragment());
-
-                break;
-            case R.id.Nav_location:
-                openFragment(new NearbyFragment());
-
-                break;
-            case R.id.Nav_menu:
-                openFragment(new MoreFragment());
-
-                break;
-        }
-        return true;
-    }
+//    void openFragment(Fragment fragment)
+//    {
+//        FragmentTransaction transaction= getFragmentManager().beginTransaction();
+//        transaction.replace(R.id.frameLayout,fragment);
+//        transaction.commit();
+//    }
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.Nav_home:
+//                openFragment(new HomeFragment());
+//
+//                break;
+//            case R.id.Nav_booking:
+//                openFragment(new BookingsFragment());
+//
+//                break;
+//            case R.id.Nav_location:
+//                openFragment(new NearbyFragment());
+//
+//                break;
+//            case R.id.Nav_menu:
+//                openFragment(new MoreFragment());
+//
+//                break;
+//        }
+//        return true;
+//    }
 }

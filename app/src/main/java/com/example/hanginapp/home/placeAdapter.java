@@ -1,6 +1,5 @@
 package com.example.hanginapp.home;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +15,11 @@ import java.util.List;
 public class placeAdapter extends RecyclerView.Adapter<PlaceHolder> {
 
     private List<Place>places;
-    private Context context;
+    private PlaceItemClick placeItemClick;
 
-    public placeAdapter(List<Place> places, Context context) {
+    public placeAdapter(List<Place> places, PlaceItemClick placeItemClick) {
         this.places = places;
-        this.context = context;
+        this.placeItemClick = placeItemClick;
     }
 
     @NonNull
@@ -34,6 +33,13 @@ public class placeAdapter extends RecyclerView.Adapter<PlaceHolder> {
     public void onBindViewHolder(@NonNull PlaceHolder holder, int position) {
         Place place=places.get(position);
         holder.ViewBind(place);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                placeItemClick.OnItemClicked(position);
+            }
+        });
 
     }
 
